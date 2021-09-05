@@ -1,0 +1,446 @@
+@import 'reset.css';
+:root {
+  /* colors */
+  --main-color: #0dcbcb;
+  --dark-background-color: #0c2e2b;
+  --mint-color: #f1fffd;
+  --gray-color: #a8a8a8;
+  --black-color: #000000;
+  --lightgray-color: #f4f4f4;
+
+  /* space */
+  --space-xxl: 72px;
+  --space-xl: 48px;
+  --space-l: 24px;
+  --space-m: 16px;
+  --space-s: 12px;
+  --space-xs: 8px;
+
+  /* font sizes */
+  --fontsize-h1: 34px;
+  --fontsize-h2: 28px;
+  --fontsize-h3: 20px;
+  --fontsize-l: 20px;
+  --fontsize-m: 18px;
+  --fontsize-s: 16px;
+  --fontsize-xs: 14px;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  max-width: 1160px;
+  height: 800px;
+  margin-top: var(--space-xl);
+  padding: var(--space-l);
+}
+
+#left {
+  max-width: 500x;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: var(--space-l);
+}
+
+#heading input {
+  font-size: var(--fontsize-l);
+  font-weight: 600;
+  margin-top: var(--space-xs);
+  height: 36px;
+  border: none;
+  border-bottom: solid 3px var(--main-color);
+  padding-left: var(--space-xs);
+  color: var(--main-color);
+}
+
+#heading input::placeholder {
+  color: var(--gray-color);
+  font-size: var(--fontsize-m);
+  font-weight: 400;
+}
+
+.name {
+  font-size: var(--fontsize-h2);
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--main-color);
+}
+
+.hidden {
+  display: none;
+}
+
+.name-container {
+  display: flex;
+  align-items: center;
+}
+
+.name-container i {
+  margin-left: var(--space-xs);
+  color: var(--gray-color);
+}
+
+.name-container i:hover {
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.1);
+  color: orangered;
+  cursor: pointer;
+}
+
+.weather-api {
+  padding-top: var(--space-l);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.clock {
+  padding-top: var(--space-m);
+}
+
+.quotes-container {
+  width: 316px;
+  padding-bottom: var(--space-xxl);
+}
+
+.quotes-container img {
+  width: 316px;
+  height: 200px;
+  object-fit: cover;
+}
+.quotes-title {
+  padding-bottom: var(--space-s);
+}
+
+.quotes {
+  font-size: var(--fontsize-xs);
+  padding-top: var(--space-s);
+  font-style: italic;
+}
+
+.quotes-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.author {
+  font-size: var(--fontsize-xs);
+  font-weight: 300;
+  padding-top: var(--space-s);
+  text-align: right;
+}
+
+#todolist {
+  display: flex;
+}
+
+h1 {
+  font-size: var(--fontsize-h1);
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: var(--fontsize-s);
+  color: var(--dark-background-color);
+}
+
+#todolist {
+  display: flex;
+  align-items: flex-end;
+  margin-top: var(--space-xxl);
+}
+
+#todolist h3 {
+  padding-bottom: var(--space-s);
+}
+
+.todolist-daily .top {
+  height: 400px;
+  background-color: var(--lightgray-color);
+  border-radius: 10px 10px 0 0;
+}
+
+.todolist-weekly .top {
+  height: 400px;
+  background-color: var(--mint-color);
+  border-radius: 10px 10px 0 0;
+}
+
+#todolist input {
+  width: 300px;
+  font-weight: 500;
+  font-size: var(--fontsize-s);
+}
+
+.todolist-daily--box input {
+  background-color: var(--main-color);
+  border: none;
+  height: 40px;
+  color: white;
+  padding-left: var(--space-s);
+  border-radius: 0 0 10px 10px;
+  margin-bottom: var(--space-xxl);
+}
+
+.todolist-daily--box input::placeholder {
+  color: white;
+  opacity: 0.7;
+}
+
+.todolist-weekly {
+  padding-left: var(--space-xs);
+}
+
+.todolist-weekly--box input {
+  background-color: var(--mint-color);
+  border: none;
+  height: 40px;
+  color: var(--main-color);
+  padding-left: var(--space-s);
+  border-radius: 0 0 10px 10px;
+  margin-bottom: var(--space-xxl);
+}
+.todolist-daily--box .line {
+  height: 2px;
+  background-color: white;
+}
+
+.todolist-weekly--box .line {
+  height: 2px;
+  background-color: var(--main-color);
+}
+
+.todolist-weekly--box input::placeholder {
+  color: var(--main-color);
+  opacity: 0.7;
+}
+
+.top {
+  padding-top: var(--space-xs);
+  overflow: auto;
+}
+.top ul {
+  display: flex;
+  justify-content: space-between;
+  padding-left: var(--space-l);
+  padding-right: var(--space-l);
+  padding-top: var(--space-xs);
+  padding-bottom: var(--space-xs);
+}
+
+.todolist-daily--box ul {
+  display: flex;
+  align-items: center;
+}
+.todolist-daily--box .item,
+.todolist-weekly--box .item {
+  font-weight: 300;
+}
+
+.todolist-daily--box .delete,
+.todolist-weekly--box .delete {
+  color: gray;
+  font-size: var(--space-s);
+  transition: all 0.2s ease-in-out;
+}
+
+.delete:hover {
+  color: orangered;
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.top li:nth-child(2):hover ~ .item {
+  color: orangered;
+}
+
+.weekly-title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.weekly-title-container img {
+  width: 80px;
+  height: 44px;
+  object-fit: cover;
+}
+
+/* --------------------------------------- */
+/* SCROLL BAR */
+/* Width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--lightgray-color);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--dark-background-color);
+}
+
+.music {
+  font-size: var(--fontsize-m);
+  position: fixed;
+  z-index: 999999;
+  width: 60px;
+  height: 60px;
+  background-color: var(--dark-background-color);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 0;
+  top: var(--space-xl);
+  border-radius: 50% 0 0 50%;
+  transition: 0.15s ease-in-out;
+  cursor: pointer;
+}
+
+.music:hover .fa-music {
+  animation: shake 1s;
+  animation-iteration-count: infinite;
+}
+
+.music:hover {
+  opacity: 1;
+  transform: translateY(2px);
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+/* --------------------------------------- */
+
+/* Media Queries */
+@media only screen and (max-width: 1020px) {
+  #left {
+    height: 788px;
+    width: 100%;
+  }
+
+  .container {
+    max-width: 900px;
+  }
+
+  #todolist {
+    width: 100%;
+    height: 804px;
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+  .todolist-daily .top,
+  .todolist-weekly .top {
+    height: 260px;
+  }
+
+  .todolist-weekly {
+    padding-left: 0;
+  }
+
+  #todolist input {
+    width: 400px;
+  }
+
+  .todolist-daily--box input {
+    margin-bottom: var(--space-l);
+  }
+}
+
+@media only screen and (max-width: 830px) {
+  .container {
+    flex-direction: column;
+  }
+
+  #left {
+    justify-content: center;
+    margin-right: 0;
+  }
+
+  #todolist {
+    align-items: center;
+  }
+
+  .quotes-container {
+    width: 400px;
+    padding-top: var(--space-xxl);
+  }
+
+  .quotes-container img {
+    min-width: 100%;
+    object-fit: cover;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .container {
+    padding: 0;
+  }
+
+  .quotes-container {
+    width: 320px;
+  }
+
+  .quotes-container img {
+    width: 100%;
+  }
+
+  #todolist input {
+    width: 320px;
+  }
+  #heading {
+    width: 100%;
+  }
+  #left {
+    margin-right: 0;
+  }
+}

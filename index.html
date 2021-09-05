@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>todo</title>
+    <!-- favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/e8644e93da.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- scripts -->
+    <script defer src="js/app.js"></script>
+  </head>
+  <body>
+    <audio src="music/music.mp3" id="audio" loop></audio>
+    <ul class="music">
+      <li><i class="fas fa-music"></i></li>
+      <li class="hidden"><i class="fas fa-pause"></i></li>
+    </ul>
+    <div class="container">
+      <div id="left">
+        <div class="left-top">
+          <p class="date"></p>
+          <header id="heading">
+            <h1 class="greeting">Good Morning !</h1>
+            <input type="text" placeholder="What's your name?" />
+            <div class="name-container">
+              <p class="name hidden"></p>
+              <div class="modify hidden">
+                <i class="far fa-edit"></i>
+              </div>
+            </div>
+          </header>
+
+          <div class="weather-api">
+            <p class="weather"></p>
+            <p class="location"></p>
+          </div>
+          <p class="clock"></p>
+        </div>
+
+        <div class="quotes-container">
+          <h3 class="quotes-title">today's photo .</h3>
+          <img class="quotes-images" src="" alt="" />
+          <div class="quotes-section">
+            <div class="quotes">
+              “ Don’t take criticism from people you wouldn’t take advice from ”
+            </div>
+            <div class="author">― Kyle Freedman</div>
+          </div>
+        </div>
+      </div>
+
+      <main id="todolist">
+        <div class="todolist-daily">
+          <h3 class="daily-title">daily .</h3>
+          <div class="todolist-daily--box">
+            <div class="top"></div>
+            <div class="line"></div>
+            <form class="js_todo">
+              <input type="text" class="bottom" / placeholder ="enter new task"
+              required >
+            </form>
+          </div>
+        </div>
+        <div class="todolist-weekly">
+          <div class="weekly-title-container">
+            <h3 class="weekly-title">weekly .</h3>
+            <img src="images/choon_right.png" alt="" />
+          </div>
+          <div class="todolist-weekly--box">
+            <div class="top"></div>
+            <div class="line"></div>
+            <form class="js_todo">
+              <input
+                type="text"
+                class="bottom"
+                placeholder="enter new task"
+                required
+              />
+            </form>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
