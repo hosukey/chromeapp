@@ -442,5 +442,10 @@ h3 {
   }
   #left {
     margin-right: 0;
+    padding-left: var(--space-xl);
+  }
+
+  .music {
+    top: var(--space-s);
   }
 }
