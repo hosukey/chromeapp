@@ -39,7 +39,7 @@ body {
   max-width: 1160px;
   height: 800px;
   margin-top: var(--space-xl);
-  padding: var(--space-l);
+  padding-top: var(--space-xl);
 }
 
 #left {
@@ -360,6 +360,10 @@ h3 {
 }
 /* --------------------------------------- */
 
+.backtop {
+  display: none;
+}
+
 /* Media Queries */
 @media only screen and (max-width: 1020px) {
   #left {
@@ -394,9 +398,48 @@ h3 {
   .todolist-daily--box input {
     margin-bottom: var(--space-l);
   }
+
+  .backtop {
+    color: var(--dark-background-color);
+    display: block;
+    position: relative;
+    text-align: right;
+    padding-bottom: var(--space-xl);
+  }
+
+  .backtop a:hover::after {
+    width: 100px;
+    right: 0;
+  }
+
+  .backtop a::after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 40px;
+    content: '';
+    display: block;
+    height: 4px;
+    right: 0;
+    position: absolute;
+    background: var(--dark-background-color);
+    transition: width 0.5s ease 0s, right 0.5s ease 0s;
+    width: 0;
+  }
+
+  /* .backtop button {
+    opacity: 0.5;
+    font-size: var(--fontsize-m);
+    width: 140px;
+    height: 40px;
+    background-color: transparent;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .backtop button:hover {
+    opacity: 1;
+  } */
 }
 
-@media only screen and (max-width: 830px) {
+@media only screen and (max-width: 767px) {
   .container {
     flex-direction: column;
   }
