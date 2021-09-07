@@ -81,7 +81,7 @@ const monthNames = [
 const days = [
   'Sunday',
   'Monday',
-  'TuesDay',
+  'Tuesday',
   'Wednesday',
   'Thursday',
   'Friday',
