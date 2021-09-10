@@ -1,7 +1,7 @@
 # Todo-List
 
 ### introduction
-A simple todo-list made using vanila javaScript, html and css.<br>
+A simple todo-list made using vanilla javaScript, html and css.<br>
 [Click here for live demo](https://hosukey.github.io/chromeapp/)
 
 ### features
