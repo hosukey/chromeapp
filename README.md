@@ -2,7 +2,7 @@
 
 ### introduction
 A simple todo-list made using vanilla javaScript, html and css.<br>
-[Click here for live demo](https://hosukey.github.io/chromeapp/)
+[Click here for live demo](https://hosukey.github.io/todo-list/)
 
 ### features
 - responsive design for desktop, tablet and mobile
@@ -19,4 +19,4 @@ A simple todo-list made using vanilla javaScript, html and css.<br>
 - [favicon](favicon.io)<br>
 
 ### images
-![screenshot](https://github.com/hosukey/chromeapp/blob/main/images/project_image.png?raw=true)
+![screenshot](https://github.com/hosukey/todo-list/blob/main/images/project_image.png?raw=true)
