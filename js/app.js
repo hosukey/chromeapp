@@ -1,15 +1,6 @@
 'use strict';
 
-//Problems
-//1. greetings - change greetings by time
-//2. get name and save it to local storage
-//3. get the date
-//4. get weather api
-//5. get time
-//6. get random photos displayed
-//7. get random quotes and author displayed
-//8. todo list (add item, remove item)
-
+// Variables
 const greet = document.querySelector('.greeting');
 const userName = document.querySelector('#heading input');
 const setName = document.querySelector('.name');
@@ -17,7 +8,7 @@ const editName = document.querySelector('.modify');
 const today = new Date();
 const date = document.querySelector('#left .date');
 
-//1
+//Greetings
 function greetings() {
   let time = today.getHours();
   if (time >= 18) {
@@ -32,7 +23,7 @@ function greetings() {
 }
 greetings();
 
-//2
+// Name input save to local storage
 userName.addEventListener('keyup', function (e) {
   if (e.keyCode === 13) {
     userName.classList.toggle('hidden');
@@ -61,7 +52,7 @@ editName.addEventListener('click', function () {
   userName.value = '';
 });
 
-//3
+// Date display
 
 const monthNames = [
   'January',
@@ -92,7 +83,7 @@ date.innerHTML = `${days[today.getDay()]} ${
   monthNames[today.getMonth()]
 } ${today.getDate()}, ${today.getFullYear()}`;
 
-//4 - weather api
+// Weather API
 function onGeoOk(position) {
   const lat = position.coords.latitude;
   const lon = position.coords.longitude;
@@ -115,7 +106,7 @@ navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
 
 const API_KEY = '230638eecf67cba9f64dcabe623a6c05';
 
-//5
+// get Time
 function getClock() {
   const date = new Date();
   const clock = document.querySelector('.clock');
@@ -129,7 +120,7 @@ function getClock() {
 
 setInterval(getClock, 1000);
 
-//6
+// Random Photo display
 const images = [
   {
     url: 'images/choon_01.jpeg',
@@ -152,7 +143,7 @@ const quoteImages = document.querySelector('.quotes-images');
 const randomNumber = Math.floor(Math.random() * images.length);
 quoteImages.src = `${images[randomNumber].url}`;
 
-//7
+// Random quote and author display
 const quotes = [
   {
     id: 0,
@@ -208,7 +199,7 @@ function displayQuote() {
 
 displayQuote();
 
-//8
+// Save, Delete, Paint todo
 const newTaskDaily = document.querySelector('.todolist-daily--box .js_todo');
 const newTaskDailyInput = document.querySelector('.todolist-daily--box input');
 const todoTopDaily = document.querySelector('.todolist-daily--box .top');
