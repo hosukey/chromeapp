@@ -1,12 +1,23 @@
 @import 'reset.css';
+
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff')
+    format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
 :root {
   /* colors */
-  --main-color: #0dcbcb;
-  --dark-background-color: #0c2e2b;
+  --main-color: #1d5962;
+  --dark-background-color: #404e88;
+  --music-color: #ebc7d8;
   --mint-color: #f1fffd;
   --gray-color: #a8a8a8;
   --black-color: #000000;
   --lightgray-color: #f4f4f4;
+  --light-background: #f1f3f8;
 
   /* space */
   --space-xxl: 72px;
@@ -27,17 +38,23 @@
 }
 
 body {
+  font-family: pretendard, sans-serif;
   width: 100%;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--dark-background-color);
 }
 
 .container {
   display: flex;
   max-width: 1160px;
-  height: 800px;
+  height: 100%;
+  background-color: var(--light-background);
+  padding: 2rem;
+  border-radius: 1.2rem;
+  margin-bottom: 2rem;
 }
 
 #left {
@@ -57,6 +74,7 @@ body {
   border-bottom: solid 3px var(--main-color);
   padding-left: var(--space-xs);
   color: var(--main-color);
+  background-color: transparent;
 }
 
 #heading input::placeholder {
@@ -161,20 +179,23 @@ h3 {
 
 .todolist-daily .top {
   height: 400px;
-  background-color: var(--lightgray-color);
+  background-color: white;
   border-radius: 10px 10px 0 0;
+  /* flex: 1; */
 }
 
 .todolist-weekly .top {
   height: 400px;
-  background-color: var(--mint-color);
+  background-color: white;
   border-radius: 10px 10px 0 0;
+  /* flex: 1; */
 }
 
 #todolist input {
-  width: 300px;
   font-weight: 500;
   font-size: var(--fontsize-s);
+  min-width: 100%;
+  overflow-x: hidden;
 }
 
 .todolist-daily--box input {
@@ -189,11 +210,14 @@ h3 {
 
 .todolist-daily--box input::placeholder {
   color: white;
-  opacity: 0.7;
+}
+.todolist-daily {
+  flex: 1;
 }
 
 .todolist-weekly {
   padding-left: var(--space-xs);
+  flex: 1;
 }
 
 .todolist-weekly--box input {
@@ -205,6 +229,7 @@ h3 {
   border-radius: 0 0 10px 10px;
   margin-bottom: var(--space-xxl);
 }
+
 .todolist-daily--box .line {
   height: 2px;
   background-color: white;
@@ -217,12 +242,12 @@ h3 {
 
 .todolist-weekly--box input::placeholder {
   color: var(--main-color);
-  opacity: 0.7;
 }
 
 .top {
   padding-top: var(--space-xs);
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 .top ul {
   display: flex;
@@ -239,7 +264,7 @@ h3 {
 }
 .todolist-daily--box .item,
 .todolist-weekly--box .item {
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .todolist-daily--box .delete,
@@ -299,7 +324,7 @@ h3 {
   z-index: 999999;
   width: 60px;
   height: 60px;
-  background-color: var(--dark-background-color);
+  background-color: var(--music-color);
   color: white;
   display: flex;
   justify-content: center;
@@ -450,24 +475,44 @@ h3 {
     transition: width 0.5s ease 0s, right 0.5s ease 0s;
     width: 0;
   }
+
+  .top {
+    max-width: 400px;
+  }
 }
 
 @media only screen and (max-width: 414px) {
-  .container {
+  body {
     padding: 0;
+  }
+  .container {
+    height: 100%;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
   }
 
   .quotes-container {
-    width: 320px;
+    width: 100%;
   }
 
   .quotes-container img {
     width: 100%;
   }
 
+  #left {
+    padding: 1rem;
+  }
+
   #todolist input {
     width: 320px;
   }
+
+  #todolist {
+    padding: 1rem;
+  }
+
   #heading {
     width: 100%;
   }
