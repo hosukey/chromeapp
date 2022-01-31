@@ -181,20 +181,18 @@ h3 {
   height: 400px;
   background-color: white;
   border-radius: 10px 10px 0 0;
-  /* flex: 1; */
 }
 
 .todolist-weekly .top {
   height: 400px;
   background-color: white;
   border-radius: 10px 10px 0 0;
-  /* flex: 1; */
 }
 
 #todolist input {
   font-weight: 500;
   font-size: var(--fontsize-s);
-  min-width: 100%;
+  min-width: 300px;
   overflow-x: hidden;
 }
 
