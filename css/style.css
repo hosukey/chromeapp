@@ -192,7 +192,7 @@ h3 {
 #todolist input {
   font-weight: 500;
   font-size: var(--fontsize-s);
-  min-width: 300px;
+  width: 300px;
   overflow-x: hidden;
 }
 
@@ -246,6 +246,7 @@ h3 {
   padding-top: var(--space-xs);
   overflow-y: auto;
   overflow-x: hidden;
+  width: 300px;
 }
 .top ul {
   display: flex;
@@ -254,6 +255,7 @@ h3 {
   padding-right: var(--space-l);
   padding-top: var(--space-xs);
   padding-bottom: var(--space-xs);
+  overflow-wrap: break-word;
 }
 
 .todolist-daily--box ul {
@@ -263,6 +265,9 @@ h3 {
 .todolist-daily--box .item,
 .todolist-weekly--box .item {
   font-weight: 400;
+  overflow-wrap: break-word;
+  width: 100%;
+  padding-right: 0.8rem;
 }
 
 .todolist-daily--box .delete,
@@ -412,6 +417,9 @@ h3 {
     padding-left: 0;
   }
 
+  .top {
+    width: 400px;
+  }
   #todolist input {
     width: 400px;
   }
@@ -503,12 +511,12 @@ h3 {
     padding: 1rem;
   }
 
-  #todolist input {
-    width: 320px;
+  .top {
+    width: 350px;
   }
 
-  #todolist {
-    padding: 1rem;
+  #todolist input {
+    width: 350px;
   }
 
   #heading {
