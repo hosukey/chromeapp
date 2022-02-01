@@ -126,7 +126,7 @@ const images = [
     url: 'images/choon_01.jpeg',
   },
   {
-    url: 'images/choon_02.jpeg',
+    url: 'images/choon_02.jpg',
   },
   {
     url: 'images/choon_03.jpeg',
@@ -154,8 +154,8 @@ const quotes = [
   {
     id: 1,
     quotes:
-      "“You know you're in love when you can't fall asleep because reality is finally better than your dreams.”",
-    author: 'Dr. Seuss',
+      '“Happiness is not something ready made. It comes from your own actions.”',
+    author: 'Dalai Lama',
   },
   {
     id: 2,
