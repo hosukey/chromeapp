@@ -14,9 +14,8 @@ A simple todo-list made using vanilla javaScript, html and css.<br>
 - music play button
 
 ### references
-- [google fonts](fonts.google.com)<br>
 - [font awesome](fontawesome.com)<br>
 - [favicon](favicon.io)<br>
 
 ### images
-![screenshot](https://github.com/hosukey/todo-list/blob/main/images/project_image.png?raw=true)
+![screenshot](https://github.com/hosukey/todo-list/blob/main/images/project_image.jpg?raw=true)
